@@ -35,6 +35,7 @@ public class Principal {
 			System.out.println(filmesPorDiretor.get(i).getTitulo());
 		}
 		
+		//Filmes por genero e por nomes 
 
 	}
 
