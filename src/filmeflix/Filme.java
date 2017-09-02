@@ -2,10 +2,10 @@ package filmeflix;
 
 import java.util.ArrayList;
 
-public class Flime {
+public class Filme {
 	private String titulo;
 	private String diretor;
-	private String anolancamento;
+	private int anolancamento;
 	private String genero;
 	private ArrayList<Avaliacao> avaliacoes; 
 	
@@ -13,7 +13,7 @@ public class Flime {
 	
 	//Metodo construtor
 	
-	public Flime(String titulo, String diretor, String anolancamento, String genero) {
+	public Filme(String titulo, String diretor, int anolancamento, String genero) {
 		this.titulo = titulo;
 		this.diretor = diretor;
 		this.anolancamento = anolancamento;
@@ -39,10 +39,10 @@ public class Flime {
 	public void setDiretor(String diretor) {
 		this.diretor = diretor;
 	}
-	public String getAnolancamento() {
+	public int getAnolancamento() {
 		return anolancamento;
 	}
-	public void setAnolancamento(String anolancamento) {
+	public void setAnolancamento(int anolancamento) {
 		this.anolancamento = anolancamento;
 	}
 	public String getGenero() {
