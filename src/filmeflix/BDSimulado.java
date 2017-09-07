@@ -1,6 +1,4 @@
 package filmeflix;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class BDSimulado {
@@ -109,17 +107,43 @@ public class BDSimulado {
 		}
 		return resultado;
 		
+	}
+	
+	//Metodo que retorna a lista de filmes de um genero informado 
+	
+	public ArrayList<Filme> getFilmesPorGenero(String genero){
 		
+		ArrayList<Filme> resultado= new ArrayList<Filme>();
 		
+		//Percorrer a lista de filmes
 		
-		
+		//this.filmes* é para fazer a contagem na lista de filme (como ver na linha  16)
+		for (int i = 0; i < this.filmes.size(); i++) {
+			//verificar se o filme é do genero
+			// .equals ou == * são a mesma coisa 
+			if (this.filmes.get(i).getGenero().equals(genero)) {
+				resultado.add(this.filmes.get(i));
+			}
+		}
+		return resultado;
 		
 	}
 	
+	//Metodo que retorna a lista de filmes de nomes nformado
 	
-	
-	
-	
+	public ArrayList<Filme> getFilmesPorNomes(String nome){
+		
+		ArrayList<Filme> resultado= new ArrayList<Filme>();
+		
+		for (int i = 0; i < this.filmes.size(); i++) {
+			if (this.filmes.get(i).getTitulo() == nome) {
+				resultado.add(this.filmes.get(i));
+			}
+			
+		}
+		return resultado;
+				
+	}
 	
 	
 }

@@ -14,7 +14,7 @@ public class Usuario {
 	}
 
 	
-	
+	 
 	
 	//Metodo get e set
 	

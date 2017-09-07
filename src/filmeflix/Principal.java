@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Principal {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		// Instanciar o BDSimulado
 		
 		BDSimulado bds= new BDSimulado();
@@ -22,20 +22,62 @@ public class Principal {
 		}
 		
 		
+		
+		// Exibindo filmes por ano específico 
+		
 		ArrayList<Filme> filmesPorAno = bds.getfilmesPorAno(2001);
 		
         //imprimir 
 		for (int i = 0; i < filmesPorAno.size(); i++) {
-			System.out.println(filmesPorAno.get(i).getTitulo());
+			System.out.println(filmesPorAno.get(i).getTitulo() + "\n");
 		}
+		
+		// Exinbindo filmes por diretor específico
 		
 		ArrayList<Filme> filmesPorDiretor = bds.getFilmesPorDiretor("Marcos Vinicius");
 		
+		//imprimir
+		
 		for (int i = 0; i < filmesPorDiretor.size(); i++) {
-			System.out.println(filmesPorDiretor.get(i).getTitulo());
+			System.out.println(filmesPorDiretor.get(i).getTitulo() + "\n");
 		}
 		
 		//Filmes por genero e por nomes 
+	
+		
+		
+		//Exinbindo filmes por genero específico
+		
+		
+		//o bds.* é uma instacia da clas *BDSimulado  	
+		
+		ArrayList<Filme> filmesPorGenero = bds.getFilmesPorGenero("Drama");
+		
+		//Imprimir 
+		
+	    for (int i = 0; i < filmesPorGenero.size(); i++) {
+			System.out.println(filmesPorGenero.get(i).getTitulo() + "\n");
+		}
+	    
+	    
+	    //Exinbindo filmes por nomes 
+	    
+	    ArrayList<Filme> filmesPorNomes = bds.getFilmesPorNomes("Clube da Luta");
+	    
+	    // Imprimir
+	    
+	    for (int i = 0; i < filmesPorNomes.size(); i++) {
+			System.out.println(filmesPorNomes.get(i).getDiretor() + " - " + filmesPorNomes.get(i).getGenero() + " - " + 
+					filmesPorNomes.get(i).getAnolancamento());
+		}
+	    
+	    
+	    
+	    
+	    
+  
+	    
+	    
 
 	}
 
