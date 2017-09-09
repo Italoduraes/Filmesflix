@@ -1,4 +1,5 @@
 package filmeflix;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class BDSimulado {
@@ -36,12 +37,12 @@ public class BDSimulado {
 		
 		//instanciar objetos da classe Usuario
 		
-		Usuario u1= new Usuario("Joao", "Masculino", 55);
-		Usuario u2= new Usuario("José", "Masculino", 15);
-		Usuario u3= new Usuario("Adão", "Masculino", 24);
-		Usuario u4= new Usuario("Maria", "Feminino", 25);
-		Usuario u5= new Usuario("Isabela", "Feminino", 51);
-		Usuario u6= new Usuario("Vanessa", "Feminino", 45);
+		Usuario u1= new Usuario("123456","Joao", "Masculino", 55);
+		Usuario u2= new Usuario("852177","José", "Masculino", 15);
+		Usuario u3= new Usuario("132546","Adão", "Masculino", 24);
+		Usuario u4= new Usuario("645616","Maria", "Feminino", 25);
+		Usuario u5= new Usuario("641651","Isabela", "Feminino", 51);
+		Usuario u6= new Usuario("254691","Vanessa", "Feminino", 45);
 		
 		
 		//Colocar os usuarios na lista
@@ -129,7 +130,7 @@ public class BDSimulado {
 		
 	}
 	
-	//Metodo que retorna a lista de filmes de nomes nformado
+	//Metodo que retorna a lista de filmes de nomes informado
 	
 	public ArrayList<Filme> getFilmesPorNomes(String nome){
 		
@@ -144,6 +145,75 @@ public class BDSimulado {
 		return resultado;
 				
 	}
+	
+	//Metodo que retorna o usuario de acordo com CPF
+	
+	public Usuario getUsuarioPorCPF (String CPF){
+		
+		Usuario resultado = null;
+		
+		//Percorrer a lista de usuarios 
+		for (int i = 0; i < this.usuarios.size(); i++) {
+			//verificar se o CPF corresponde ao CPF informado
+			if (this.usuarios.get(i).getCPF().equals(CPF));{
+				resultado = this.usuarios.get(i);
+			}
+			
+		}
+		return resultado;
+		
+	}
+	
+	// metodo que dá avaliaçao a um filme
+	public void AddAvaliacaoFilme(String tituloFilme, String CPFUsuario, int notaFilme){
+		//Declarar um objeto de avaliçao
+		
+		Avaliacao avaliaçao = new Avaliacao (getUsuarioPorCPF(CPFUsuario), notaFilme);
+		
+		//Percorrer a lista de filmes 
+		for (int i = 0; i < this.filmes.size(); i++) {
+			//verificar se é o filme com aquele nome
+			if (this.filmes.get(i).getTitulo().equals(tituloFilme)){
+				this.filmes.get(i).getAvaliacoes().add(avaliaçao);
+			}
+			
+		}
+	}
+	
+	
+	//Metodo 
+	
+	public ArrayList<Filme> getBuscaNota(int notaDoFilme){
+		
+		ArrayList<Filme> resultado = new ArrayList<Filme>();
+		
+		for (int i = 0; i < this.filmes.size(); i++) {
+			for (int j = 0; j < this.filmes.get(i).getAvaliacoes().size(); j++) {
+				if (this.filmes.get(i).getAvaliacoes().get(j).getNota() >= 4){
+					resultado.add(this.filmes.get(i));
+			}
+			
+			}
+		}
+		return resultado;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

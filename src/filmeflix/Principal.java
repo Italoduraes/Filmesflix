@@ -32,7 +32,7 @@ public class Principal {
 			System.out.println(filmesPorAno.get(i).getTitulo() + "\n");
 		}
 		
-		// Exinbindo filmes por diretor específico
+		// Exinbindo filmes por diretor informado
 		
 		ArrayList<Filme> filmesPorDiretor = bds.getFilmesPorDiretor("Marcos Vinicius");
 		
@@ -46,9 +46,9 @@ public class Principal {
 	
 		
 		
-		//Exinbindo filmes por genero específico
+		//Exinbindo filmes por genero informado
 		
-		
+		 
 		//o bds.* é uma instacia da clas *BDSimulado  	
 		
 		ArrayList<Filme> filmesPorGenero = bds.getFilmesPorGenero("Drama");
@@ -62,7 +62,7 @@ public class Principal {
 	    
 	    //Exinbindo filmes por nomes 
 	    
-	    ArrayList<Filme> filmesPorNomes = bds.getFilmesPorNomes("Clube da Luta");
+	    ArrayList<Filme> filmesPorNomes = bds.getFilmesPorNomes("Star Wars");
 	    
 	    // Imprimir
 	    
@@ -72,13 +72,43 @@ public class Principal {
 		}
 	    
 	    
+	    //Usuario por CPF
 	    
+	    Usuario usuario= bds.getUsuarioPorCPF("645616");
 	    
-	    
+	    System.out.println(usuario);
   
 	    
+	    //criar 5 avaliacoes para os filmes 
 	    
-
+	    
+	    bds.AddAvaliacaoFilme("Os Outros", "123456", 2);
+	    bds.AddAvaliacaoFilme("Titanic", "852177", 5);
+	    bds.AddAvaliacaoFilme("Forrest Gump", "132546", 3);
+	    bds.AddAvaliacaoFilme("Star Wars", "645616", 5);
+	    bds.AddAvaliacaoFilme("Clube da Luta", "641651", 1);
+	    
+	    
+	    
+	    //imprimir titulo dos filmes  com avaliacao >=4
+	    
+	    ArrayList<Filme> NotasMaiores = bds.getBuscaNota(4);
+	    
+	    
+	     for (int i = 0; i < NotasMaiores.size(); i++) {
+			 System.out.println(NotasMaiores.get(i).getTitulo());
+		}
+	     
+	     
+	   
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	}
 
 }

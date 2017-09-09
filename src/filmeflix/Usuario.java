@@ -1,19 +1,27 @@
 package filmeflix;
 
 public class Usuario {
-	
+	private String CPF;
 	private String nome;
 	private String sexo;
 	private int idade;
 	
 	//Metodo construtor
-	public Usuario(String nome, String sexo, int idade) {
+	public Usuario(String CPF, String nome, String sexo, int idade) {
+		this.CPF = CPF;
 		this.nome = nome;
 		this.sexo = sexo;
 		this.idade = idade;
 	}
 
+	// sobreescrever metodo toString
 	
+	public String toString(){
+		return "CPF: " + this.CPF + "\n" + 
+				"Nome: " + this.nome + "\n" +
+	           "Sexo: " + this.sexo + "\n" +
+				"Idade: " + this.idade + "\n" ;
+	}
 	 
 	
 	//Metodo get e set
@@ -36,7 +44,15 @@ public class Usuario {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-	
+
+
+	public String getCPF() {
+		return CPF;
+	}
+
+	public void setCPF(String cPF) {
+		CPF = cPF;
+	}
 	
 	
 
