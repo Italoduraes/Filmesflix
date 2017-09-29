@@ -8,7 +8,7 @@ public class BDSimulado {
 	private ArrayList<Usuario> usuarios;
 	
 
-	//Metodo construtot
+	//Metodo construtor
 	public BDSimulado(){
 		//instanciar o atributo filmes
 		
@@ -53,11 +53,7 @@ public class BDSimulado {
 		this.usuarios.add(u4);
 		this.usuarios.add(u5);
 		this.usuarios.add(u6);
-		
-		
-		
-		
-		
+	
 	}
 
 
@@ -201,7 +197,7 @@ public class BDSimulado {
 	
 	
 	
-	// nova versao
+	
 	
 	
 	

@@ -17,7 +17,7 @@ public class Principal {
 		
 		for ( int i=0; i<filmes.size();i++) {
 			if (filmes.get(i).getAnolancamento() > 2000){
-				System.out.println(filmes.get(i).getTitulo() + " / " + filmes.get(i).getGenero() + "\n");
+				//System.out.println(filmes.get(i).getTitulo() + " / " + filmes.get(i).getGenero() + "\n");
 			}
 		}
 		
@@ -29,7 +29,7 @@ public class Principal {
 		
         //imprimir 
 		for (int i = 0; i < filmesPorAno.size(); i++) {
-			System.out.println(filmesPorAno.get(i).getTitulo() + "\n");
+			//System.out.println(filmesPorAno.get(i).getTitulo() + "\n");
 		}
 		
 		// Exinbindo filmes por diretor informado
@@ -39,13 +39,10 @@ public class Principal {
 		//imprimir
 		
 		for (int i = 0; i < filmesPorDiretor.size(); i++) {
-			System.out.println(filmesPorDiretor.get(i).getTitulo() + "\n");
+		//	System.out.println(filmesPorDiretor.get(i).getTitulo() + "\n");
 		}
 		
-		//Filmes por genero e por nomes 
-	
-		
-		
+
 		//Exinbindo filmes por genero informado
 		
 		 
@@ -56,7 +53,7 @@ public class Principal {
 		//Imprimir 
 		
 	    for (int i = 0; i < filmesPorGenero.size(); i++) {
-			System.out.println(filmesPorGenero.get(i).getTitulo() + "\n");
+			//System.out.println(filmesPorGenero.get(i).getTitulo() + "\n");
 		}
 	    
 	    
@@ -67,14 +64,14 @@ public class Principal {
 	    // Imprimir
 	    
 	    for (int i = 0; i < filmesPorNomes.size(); i++) {
-			System.out.println(filmesPorNomes.get(i).getDiretor() + " - " + filmesPorNomes.get(i).getGenero() + " - " + 
-					filmesPorNomes.get(i).getAnolancamento());
+			//System.out.println(filmesPorNomes.get(i).getDiretor() + " - " + filmesPorNomes.get(i).getGenero() + " - " + 
+			//		filmesPorNomes.get(i).getAnolancamento());
 		}
 	    
 	    
 	    //Usuario por CPF
 	    
-	    Usuario usuario= bds.getUsuarioPorCPF("645616");
+	    Usuario usuario= bds.getUsuarioPorCPF("132546");
 	    
 	    System.out.println(usuario);
   
@@ -96,7 +93,7 @@ public class Principal {
 	    
 	    
 	     for (int i = 0; i < NotasMaiores.size(); i++) {
-			 System.out.println(NotasMaiores.get(i).getTitulo());
+			// System.out.println(NotasMaiores.get(i).getTitulo());
 		}
 	     
 	     
@@ -104,7 +101,7 @@ public class Principal {
 	    
 	    
 	    
-	    //vafnqnqofnqi
+	    
 	    
 	    
 	    
